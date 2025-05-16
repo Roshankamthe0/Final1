@@ -15,15 +15,14 @@ body {
             color: #333;
 }
 
-/* .navbar {
+ /* .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 30px;
     position: relative;
     z-index: 1000; 
-    /* position: sticky;
-    top: 0; */
+    */
    
     /* background-color: #004d7f; */
     
@@ -209,19 +208,7 @@ body {
 
 }
 
-.footer1 {
-    padding: 21px 20px;
-    border: none; 
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #004d7f;
-    color: #FFFFFF;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 main,body
 {
     font-family: 'Varela Round', sans-serif;

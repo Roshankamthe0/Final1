@@ -8,6 +8,7 @@
               linear-gradient(90deg, #59ff00, #007bff, #007bff, #007bff) border-box;
   background-size: 200% 200%;
   box-shadow: 0 0 15px rgba(0, 123, 255, 0.5); 
+  
 }
 
 .contact-container::before,
@@ -54,6 +55,7 @@
   background: #fff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   padding: 2rem;
+  margin-top: 80px
 }
 
 .form-container,
