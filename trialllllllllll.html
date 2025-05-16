@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+     <style>body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .dashboard {
+        width: 80%;
+        margin: 20px auto;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    header h1 {
+        margin: 0;
+        font-size: 24px;
+    }
+    
+    header p {
+        margin: 5px 0 20px;
+        color: #666;
+    }
+    
+    .metrics {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    
+    .metric {
+        background-color: #f8f9fa;
+        padding: 15px;
+        border-radius: 5px;
+        width: 30%;
+        text-align: center;
+    }
+    
+    .metric h2 {
+        margin: 0;
+        font-size: 18px;
+    }
+    
+    .metric p {
+        font-size: 24px;
+        margin: 10px 0;
+    }
+    
+    .metric small {
+        display: block;
+        color: #666;
+    }
+    
+    .metric span {
+        display: block;
+        font-size: 14px;
+    }
+    
+    .positive {
+        color: green;
+    }
+    
+    .negative {
+        color: red;
+    }
+    
+    .projects {
+        background-color: #f8f9fa;
+        padding: 15px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+    
+    .projects h2 {
+        margin: 0;
+        font-size: 18px;
+    }
+    
+    .projects p {
+        font-size: 24px;
+        margin: 10px 0;
+    }
+    
+    .projects small {
+        display: block;
+        color: #666;
+    }
+    
+    .project-overview {
+        margin-bottom: 20px;
+    }
+    
+    .project-overview h2 {
+        margin: 0 0 15px;
+        font-size: 18px;
+    }
+    
+    .project {
+        background-color: #f8f9fa;
+        padding: 15px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+    
+    .project h3 {
+        margin: 0;
+        font-size: 16px;
+    }
+    
+    .project p {
+        margin: 5px 0;
+        color: #666;
+    }
+    
+    .progress {
+        background-color: #e9ecef;
+        border-radius: 5px;
+        height: 10px;
+        margin: 10px 0;
+    }
+    
+    .progress-bar {
+        background-color: #28a745;
+        height: 100%;
+        border-radius: 5px;
+    }
+    
+    .performer {
+        background-color: #f8f9fa;
+        padding: 15px;
+        border-radius: 5px;
+    }
+    
+    .performer h2 {
+        margin: 0;
+        font-size: 18px;
+    }
+    
+    .performer p {
+        margin: 5px 0;
+        color: #666;
+    }</style>
+</head>
+<body>
+    <div class="dashboard">
+        <header>
+            <h1>Dagoda</h1>
+            <p>Macron, We're thrilled to have you here!</p>
+        </header>
+
+        <div class="metrics">
+            <div class="metric">
+                <h2>Total Revenue</h2>
+                <p>$120,720</p>
+                <small>This Month</small>
+                <span class="positive">+2.05% this month</span>
+            </div>
+            <div class="metric">
+                <h2>Total Order</h2>
+                <p>1,267</p>
+                <small>This Month</small>
+                <span class="negative">-0.3% this month</span>
+            </div>
+            <div class="metric">
+                <h2>Pending Invoice</h2>
+                <p>$150,720</p>
+            </div>
+        </div>
+
+        <div class="projects">
+            <h2>Ongoing Projects</h2>
+            <p>15 <small>This Month</small></p>
+            <span class="negative">-0.60% this month</span>
+        </div>
+
+        <div class="project-overview">
+            <h2>Project Overview</h2>
+            <div class="project">
+                <h3>Website UI Design</h3>
+                <p>Learn: ipsum dolor sit amet consectetur.</p>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 35%;"></div>
+                </div>
+                <small>35%</small>
+            </div>
+            <div class="project">
+                <h3>App UI Design</h3>
+                <p>Learn: ipsum dolor sit amet consectetur.</p>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 70%;"></div>
+                </div>
+                <small>70%</small>
+            </div>
+        </div>
+
+        <div class="performer">
+            <h2>Performer</h2>
+            <p>only 56bits</p>
+            <p>99bits finished</p>
+            <p>$1,200</p>
+            <p>$75,270</p>
+        </div>
+    </div>
+
+    <script>
+        
+    </script>
+</body>
+</html>

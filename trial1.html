@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services-AI Technologies</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"  href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <style>
+ 
+ 
+     
+
+    main {
+      position: relative;
+      width: calc(min(90rem, 90%));
+      margin: 0 auto;
+      min-height: 65vh;
+      column-gap: 3rem;
+      padding-block: min(20vh, 3rem);
+    }
+
+    .bg {
+      position: fixed;
+      top: -4rem;
+      left: -12rem;
+      z-index: -1;
+      opacity: 0;
+    }
+
+    .bg2 {
+      position: fixed;
+      bottom: -2rem;
+      right: -3rem;
+      z-index: -1;
+      width: 9.375rem;
+      opacity: 0;
+    }
+
+    main > div span {
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 1rem;
+      color: #717171;
+    }
+
+    main > div h1 {
+      text-transform: capitalize;
+      letter-spacing: 0.8px;
+      font-family: "Roboto", sans-serif;
+      font-weight: 900;
+      font-size: clamp(3.4375rem, 3.25rem + 0.75vw, 4rem);
+      background-color: #005baa;
+      background-image: linear-gradient(45deg, #005baa, #000000);
+      background-size: 100%;
+      background-repeat: repeat;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-background-clip: text;
+      -moz-text-fill-color: transparent;
+    }
+
+    main > div hr {
+      display: block;
+      background: #005baa;
+      height: 0.25rem;
+      width: 6.25rem;
+      border: none;
+      margin: 1.125rem 0 1.875rem 0;
+    }
+
+    main > div p {
+      line-height: 1.6;
+    }
+
+    main a {
+      display: inline-block;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #717171;
+      font-weight: 500;
+      background: #fff;
+      border-radius: 3.125rem;
+      transition: 0.3s ease-in-out;
+    }
+
+    main > div > a {
+      border: 2px solid #c2c2c2;
+      margin-top: 2.188rem;
+      padding: 0.625rem 1.875rem;
+    }
+
+    main > div > a:hover {
+      border: 0.125rem solid #005baa;
+      color: #005baa;
+    }
+
+    .swiper {
+      width: 100%;
+      padding-top: 3.125rem;
+    }
+
+    .swiper-pagination-bullet,
+    .swiper-pagination-bullet-active {
+      background: none;
+    }
+
+    .swiper-pagination {
+      bottom: 1.25rem !important;
+    }
+
+    .swiper-slide {
+      width: 18.75rem;
+      height: 28.125rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      align-items: self-start;
+      border: 3px solid black;
+    }
+
+    .swiper-slide h2 {
+      color: #fff;
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+      font-size: 1.4rem;
+      line-height: 1.4;
+      margin-bottom: 0.625rem;
+      padding: 0 0 0 1.563rem;
+      text-transform: uppercase;
+    }
+
+    .swiper-slide p {
+      color: #dadada;
+      font-family: "Roboto", sans-serif;
+      font-weight: 300;
+      padding: 0 1.563rem;
+      line-height: 1.6;
+      font-size: 0.75rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .swiper-slide a {
+      margin: 1.25rem 1.563rem 3.438rem 1.563rem;
+      padding: 0.438em 1.875rem;
+      font-size: 0.9rem;
+    }
+
+    .swiper-slide a:hover {
+      color: #005baa;
+    }
+
+    .swiper-slide div {
+      display: none;
+      opacity: 0;
+      padding-bottom: 0.625rem;
+    }
+
+    .swiper-slide-active div {
+      display: block;
+      opacity: 1;
+    }
+    
+
+    .swiper-slide--one {
+      background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+        url("images/9.jpg")
+          no-repeat 50% 50% / cover;
+
+    }
+
+    .swiper-slide--two {
+      background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+        url("images/product\ desing_back.jpg")
+          no-repeat 50% 50% / cover;
+    }
+
+    .swiper-slide--three {
+      background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+      url("images/sim2.png")
+          no-repeat 50% 50% / cover;
+    }
+
+    .swiper-slide--four {
+      background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+      url("images/2.jpg")
+          no-repeat 50% 50% / cover;
+    }
+
+    .swiper-slide--five {
+      background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+        url("images/manufacturing.webp")
+          no-repeat 50% 50% / cover;
+    }
+
+    .swiper-slide--six {
+      background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+      url("images/R&D.webp")
+          no-repeat 50% 50% / cover;
+    }
+
+    .swiper-slide--seven {
+      background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+      url("about_us1.jpeg")
+          no-repeat 50% 50% / cover;
+    }
+
+    .swiper-slide--eight {
+      background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+      url("homepage.jpeg")
+          no-repeat 50% 50% / cover;
+    }
+    
+    .swiper-slide--nine {
+      background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+      url("reardoor.png")
+          no-repeat 50% 50% / cover;
+    }
+
+    
+
+
+    .swiper-3d .swiper-slide-shadow-left,
+    .swiper-3d .swiper-slide-shadow-right {
+      background-image: none;
+    }
+   
+.slider-controls {
+  display: flex;
+  text-align: center; 
+  margin-top: 10px;   
+  justify-content: space-around;
+}
+
+.prev-slide, .next-slide {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0 10px; 
+}
+
+
+    @media screen and (min-width: 48rem) {
+      main {
+        display: flex;
+        align-items: center;
+      }
+      .bg,
+      .bg2 {
+        opacity: 0.1;
+      }
+    }
+
+    @media screen and (min-width: 93.75rem) {
+      .swiper {
+        width: 85%;
+      }
+    }
+    /* .image-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(0%, -50%);
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.916);
+            background: rgba(0, 0, 0, 0.0881);
+            padding: 10px 20px;
+            border-radius: 10px;
+        } */
+ 
+        main
+{
+    max-width: 90%;
+            margin: 0 auto;
+            margin-bottom: 60px;
+            padding: 20px;
+            background-color: #d1d0d04e;
+           box-shadow: 0px -25px 40px -20px rgba(69, 238, 216, 0.25),
+            30px 0px 20px -25px rgba(69, 238, 216, 0.25),
+            0px 25px 20px -20px rgba(69, 238, 216, 0.25),
+            -25px 0px 40px -20px rgba(69, 238, 216, 0.25);
+}
+
+ body
+{
+    background-color: rgba(255, 255, 255, 0.597);
+}
+   </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="">AI Technologies</a>
+            </div>
+            <ul class="nav-links">
+                <li class="nav-item">
+                    <a href="index.html">Home</a>
+                    <!-- <button class="dropdown-toggle">▼</button>
+                    <div class="dropdown">
+                        <a href="#">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                    </div> -->
+                </li>
+                <li class="nav-item">
+                    <a href="About.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="service.html" class="nav-link active" >Services</a>
+                    <!-- <button class="dropdown-toggle">▼</button>
+                    <div class="dropdown">
+                        <a href="#">1</a>
+                        <a href="#">2</a>
+                    </div> -->
+                </li>
+                <li><a href="Career.html">Career</a></li>
+                <li class="nav-item">
+                    <a href="Trainning.html">Trainning</a>
+                    <!-- <button class="dropdown-toggle">▼</button>
+                    <div class="dropdown">
+                        <a href="Trainning.html#program1">Summary</a>
+                        <a href="Trainning.html#modules1">Syllabus</a>
+                        <a href="Trainning.html#projects1">Projects</a>
+            
+                        <a href="Trainning.html#contact1">Query</a>
+                    </div> -->
+                </li>
+                <li><a href="contact.html">Contact us</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+            <div class="menu" id="tmenu">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+              
+              <div>
+                <span>Our</span>
+                <h1>Services</h1>
+                <hr>
+                <p>We provided services</p>
+              </div>
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide swiper-slide--one">
+                    <div class="image-text">
+                      <h2>BIW Fixture Design</h2>
+                      <!-- <p>We specialize in designing robust and efficient BIW (Body-in-White) fixtures to ensure precise assembly and production processes.</p> -->
+                      <a href="moreinfo.html#mservice1" class="btn" onclick="toggleservice1()">SEE MORE</a> 
+                    </div>
+                  </div>
+                  <div class="swiper-slide swiper-slide--two">
+                    <div class="image-text">
+
+                      <h2>BIW Product Design</h2>
+                      <!-- <p>Our team provides end-to-end BIW product design solutions to meet the structural and functional requirements of automotive bodies.</p> -->
+                      <a href="moreinfo.html#mservice2" class="btn" onclick="toggleservice2()">SEE MORE</a>
+                    </div>
+                  </div>
+          
+                  <div class="swiper-slide swiper-slide--three">
+                    <div>
+                      <h2>Simulation</h2>
+                      <!-- <p>Advanced simulation techniques using Process Simulate and Dalmia software to optimize manufacturing processes and identify potential improvements.</p> -->
+                      <a href="moreinfo.html#mservice3" class="btn" onclick="toggleservice3()">SEE MORE</a>
+                    </div>
+                  </div>
+          
+                  <div class="swiper-slide swiper-slide--four">
+                    <div>
+                      <h2>Special Purpose Machines</h2>
+                      <!-- <p>Custom-designed SPMs tailored to specific manufacturing needs, enhancing productivity and automation.</p> -->
+                      <a href="moreinfo.html#mservice4" class="btn" onclick="toggleservice4()">SEE MORE</a>
+                    </div>
+                  </div>
+          
+                  <div class="swiper-slide swiper-slide--five">
+                    <div>
+                      <h2>Manufacturing Engineering</h2>
+                      <!-- <p>Providing expertise in optimizing production lines, reducing costs, and improving overall manufacturing efficiency.</p> -->
+                      <a href="moreinfo.html#mservice5" class="btn" onclick="toggleservice5()">SEE MORE</a>
+                    </div>
+                  </div>
+          
+                  <div class="swiper-slide swiper-slide--six">
+                    <div>
+                      <h2>R&D Services</h2>
+                      <!-- <p>Research and development services aimed at innovation, new product development, and process improvements.</p> -->
+                      <a href="moreinfo.html#mservice6" class="btn" onclick="toggleservice6()">SEE MORE</a>
+                    </div>
+                  </div>
+                  <div class="swiper-slide swiper-slide--seven">
+                    <div>
+                      <h2>Turn-Key Production System</h2>
+                      <!-- <p>We deliver complete, ready-to-operate production systems, ensuring seamless integration from design to deployment.</p> -->
+                      <a href="moreinfo.html#mservice7" class="btn" onclick="toggleservice7()">SEE MORE</a>
+                    </div>
+                  </div>
+          
+                  <div class="swiper-slide swiper-slide--eight">
+                    <div>
+                      <h2>Reverse Engineering</h2>
+                      <!-- <p>Our reverse engineering services help in analyzing and recreating existing products for improvement or duplication.</p> -->
+                      <a href="moreinfo.html#mservice8" class="btn" onclick="toggleservice8()">SEE MORE</a>
+                    </div>
+                  </div>
+          
+                  <div class="swiper-slide swiper-slide--nine">
+                    <div>
+                      <h2>Staffing and Recruiting</h2>
+                      <!-- <p>We provide recruitment solutions to help businesses find the right talent for engineering and technical roles.</p> -->
+                      <a href="moreinfo.html#mservice9" class="btn" onclick="toggleservice9()">SEE MORE</a>
+                    </div>
+                  </div>
+                 
+                </div>
+                <div class="slider-controls">
+                  <button class="prev-slide"><</button>
+                  <button class="next-slide">></button>
+                </div>
+        
+                
+                
+                <div class="swiper-pagination"></div>
+              </div>
+              
+            </main>
+            <footer>
+              <div class="footer1">
+                  <pre>
+            
+                    Copyright &copy AI Technologies 2025 All right reserved
+                    aitdesigns69@gmail.com
+                    +91 7058897873
+              </div>       
+            </footer>
+            
+          
+            <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    
+<script>
+  
+ 
+  var swiper = new Swiper(".swiper", {
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: true,
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 0,
+    depth: 100,
+    modifier: 3,
+    slideShadows: true
+  },
+  keyboard: {
+    enabled: true
+  },
+  mousewheel: {
+    thresholdDelta: 70
+  },
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 2
+    },
+    768: {
+      slidesPerView: 1
+    },
+    1024: {
+      slidesPerView: 2
+    },
+    1560: {
+      slidesPerView: 3
+    }
+  }
+});
+
+const prevButton = document.querySelector('.prev-slide');
+const nextButton = document.querySelector('.next-slide');
+prevButton.addEventListener('click', () => {
+  swiper.slidePrev();  
+});
+nextButton.addEventListener('click', () => {
+  swiper.slideNext();  
+});
+
+
+    function toggleservice1() {
+        const aboutSection = document.querySelector('.service1');
+        aboutSection.style.display = aboutSection.style.display === 'block' ? 'none' : 'block';
+    }
+    function toggleservice2() {
+        const aboutSection = document.querySelector('.service2');
+        aboutSection.style.display = aboutSection.style.display === 'block' ? 'none' : 'block';
+    }
+    function toggleservice3() {
+        const aboutSection = document.querySelector('.service3');
+        aboutSection.style.display = aboutSection.style.display === 'block' ? 'none' : 'block';
+    }
+    function toggleservice4() {
+        const aboutSection = document.querySelector('.service4');
+        aboutSection.style.display = aboutSection.style.display === 'block' ? 'none' : 'block';
+    }
+    function toggleservice5() {
+        const aboutSection = document.querySelector('.service5');
+        aboutSection.style.display = aboutSection.style.display === 'block' ? 'none' : 'block';
+    }
+    function toggleservice6() {
+        const aboutSection = document.querySelector('.service6');
+        aboutSection.style.display = aboutSection.style.display === 'block' ? 'none' : 'block';
+    }
+    function toggleservice7() {
+        const aboutSection = document.querySelector('.service7');
+        aboutSection.style.display = aboutSection.style.display === 'block' ? 'none' : 'block';
+    }
+    function toggleservice8() {
+        const aboutSection = document.querySelector('.service8');
+        aboutSection.style.display = aboutSection.style.display === 'block' ? 'none' : 'block';
+    }
+    function toggleservice9() {
+        const aboutSection = document.querySelector('.service9');
+        aboutSection.style.display = aboutSection.style.display === 'block' ? 'none' : 'block';
+    }
+    
+</script>
+<script src="script.js"></script>
+
+    <script src="service.js"></script>
+    
+</body>
+
+</html>

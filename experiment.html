@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Technology</title>
+    <link rel="stylesheet" href="style.css">
+      
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-align: justify;
+        }
+
+        body {
+            font-family: 'Varela Round', sans-serif;
+            background-color: #f4f4f4; /* Light background for contrast */
+            color: #333; /* Dark text for readability */
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 30px;
+            background-color: #004d7f; /* Deep blue */
+        }
+
+        .navbar .logo a {
+            color: #fff;
+            font-size: 24px;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style-type: none;
+            justify-content: end;
+            flex: 1;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #ffcc00; /* Highlight color on hover */
+        }
+
+        /* Main Content Styles */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #d1d0d0c2;
+            box-shadow: 0px -25px 40px -20px rgba(128, 0, 128, 0.25),
+                        30px 0px 20px -25px rgba(128, 0, 128, 0.25),
+                        0px 25px 20px -20px rgba(128, 0, 128, 0.25),
+                        -25px 0px 40px -20px rgba(128, 0, 128, 0.25);
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .content {
+            max-width: 50%;
+        }
+
+        .content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-family: 'Kavoon', sans-serif;
+            color: rgb(16, 199, 227);
+            text-align: center;
+        }
+
+        .content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .buttons a {
+            text-decoration: none;
+            padding: 0.8rem 1.5rem;
+            margin-right: 1rem;
+            border-radius: 5px;
+            font-weight: bold;
+            background-color: #007bff; /* Primary button color */
+            color: white; /* Text color for buttons */
+            transition: background-color 0.3s ease;
+        }
+
+        .buttons a:hover {
+            background-color: #0056b3; /* Darker shade on hover */
+        }
+
+        .slide1 {
+            max-width: 40%;
+            position: relative;
+            margin: auto;
+            margin-top: 2rem;
+        }
+
+        .image-section img {
+            width: 100%;
+            height: 25rem;
+            border-radius: 10px;
+            display: none;
+            animation: change_image 20s linear infinite;
+        }
+
+        .image-section img.active {
+            display: block;
+        }
+
+        /* About Section Styles */
+        .about {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #ffffff; /* White background for contrast */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            display: none; 
+        }
+
+        .about h2 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .about p {
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .about ul {
+            margin: 0;
+            padding: 0 20px;
+ color: #555;
+        }
+
+        .about ul li {
+            margin-bottom: 5px;
+        }
+
+        .network h1 {
+            font-size: 3rem;
+            padding: 20px;
+            margin: 20px 0px;
+        }
+
+        .div2 {
+            display: flex;
+            align-items: space-evenly;
+            justify-content: space-evenly;
+        }
+
+        .logo-slider {
+            width: 100%;
+            max-width: 950px; 
+            height: 100px; 
+            overflow: hidden;
+            position: relative;
+            border: 2px solid black;
+            border-radius: 8px;
+            background-color: #fff;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        .slider-track {
+            display: flex;
+            animation: scroll 25s linear infinite;
+            align-items: center;
+        }
+
+        .slide {
+            flex: 0 0 auto;
+            margin-right: 20px; 
+        }
+
+        .slide img {
+            height: 85px; 
+            align-items: center;
+            object-fit: contain;
+            margin-top: 2px;
+            margin-bottom: 2px;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .counters {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 200px;
+        }
+
+        .counter-card {
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            background-color: #e7f3ff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .counter-card .icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .counter {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .label {
+            font-size: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .content {
+                max-width: 100%;
+            }
+            .slide1 {
+                max-width: 100%;
+            }
+            .image-section img {
+                height: 16rem;
+            }
+            .counters {
+                flex-direction: column; 
+                gap: 15px;
+                margin-bottom: 100px; 
+            }
+            .counter-card {
+                width: 100%; 
+                max-width: 300px; 
+            }
+            .counter-card .icon {
+                font-size: 1.5rem; 
+            }
+            .counter {
+                font-size: 2rem;
+            }
+            .label {
+                font-size: 0.9rem; 
+            }
+        }
+
+        /* Footer Styles */
+        .footer1 {
+            padding: 21px 20px;
+            background-color: #004d7f; /* Match navbar color */
+            color: #FFFFFF;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="">AI Technologies</a>
+            </div>
+            <ul class="nav-links">
+                <li class="nav-item">
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="About.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="service.html">Services</a>
+                </li>
+                <li><a href="Career.html">Career</a></li>
+                <li class="nav-item">
+                    <a href="Trainning.html">Trainning</a>
+                </li>
+                <li><a href="contact.html">Contact us</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+            <div class="menu" id="tmenu">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="content">
+                <h1>Engineering Precision: Redefining BIW Fixture Design</h1>
+                <p>At the heart of automotive manufacturing, BIW fixture design plays a pivotal role in ensuring accuracy, reliability, and efficiency. Our team specializes in creating innovative solutions tailored to meet the unique demands of your production line. From concept to execution, we deliver precision-engineered fixtures that streamline workflows, reduce downtime, and enhance overall productivity. Trust us to elevate your manufacturing standards with designs that are as robust as they are efficient.</p>
+                <div class="buttons">
+                    <a href="#" class="explore" onclick="toggleAbout()">Explore Now</a>
+                    <a href="contact.html" class="contact">Contact Us</a>
+                </div>
+            </div>
+            <div class="slide1">
+                <div class="image-section">
+                    <img src="images/10.jpg" class="active">
+                    <img src="images/11.jpg">
+                    <img src="images/12.jpg">
+                </div>
+                <div style="text-align:center">
+                    <span class="dot active" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+        </div>
+        <div class="aboutm">
+            <section class="about" style="display: none;">
+                <h2>Who We Are</h2>
+                <p>AI Technologies (AIT) is a technology-driven organization specializing in core engineering design, development, and manufacturing services. Founded with a vision of innovation and excellence, AIT is powered by a highly skilled and experienced team. We have built a robust ecosystem that combines cutting-edge capabilities with a global delivery framework to provide unparalleled quality.</p>
+            </section>
+
+            <section class="about" style="display: none;">
+                <h2>How We Work</h2>
+                <p>At AIT, we are a team of dreamers, thinkers, and creators dedicated to pushing the boundaries of design and engineering. Our approach is centered on innovation, craftsmanship, and customer service. By consistently raising our standards, we ensure that our solutions not only meet but exceed client expectations.</p>
+                <p>Our reputation for excellence has earned us the trust of some of the biggest names in the automobile industry. This drives us to continually deliver quality services on time and within budget.</p>
+            </section>
+
+            <section class="about" style="display: none;">
+                <h2>Why Choose Us?</h2>
+                <p>Since our inception, businesses have relied on AIT for our <span class="highlight">expertise, quality, and commitment</span> to customer satisfaction. We take pride in delivering projects that delight our clients and contribute to their success.</p>
+                <p><strong>Our Promise:</strong></p>
+                <ul>
+                    <li>Expertise you can trust</li>
+                    <li>Delivery on time and within budget</li>
+                    <li>Commitment to your success</li>
+                </ul>
+                <p>At AIT, we measure our success by the success of your business. Together, let's achieve great things.</p>
+            </section>
+
+            <h2 class="title1">Our Eminent Customers</h2>
+            <div class="div2">
+                <div class="logo-slider">
+                    <div class="slider-track">
+                        <div class="slide"><img src="Images/COMAU logo.png" alt="Company 1" width="100px" height="100px"></div>
+                        <div class="slide"><img src="Images/force-logo.png" alt="Company 2" width="100px" height="100px"></div>
+                        <div class="slide"><img src="images/komastu.png" alt="Company 4" width="100px" height="100px"></div>
+                        <div class="slide"><img src="images/merce.jpeg" alt="Company 5"></div>
+                        <div class="slide"><img src="images/maruti.png" alt="Company 6"></div>
+                        <div class="slide"><img src="images/bajaj.jpeg" width="100px" height="100px" alt="Company 6"></div>
+                        <div class="slide"><img src="images/damaco.png" alt="Company 5" width="100px" height="100px"></div>
+                        <div class="slide"><img src="images/tata.png" alt="Company 1" width="100px" height="100px"></div>
+                        <div class="slide"><img src="images/faith_auto.jpeg" alt="Company10" width="100px" height="100px"></div>
+                        <div class="slide"><img src="images/parc.webp" alt="Company11" width="100px" height="100px"></div>
+                        <div class="slide"><img src="images/k udale.png" alt="Company12" width="100px" height="100px"></div>
+                        <div class="slide"><img src="images/patil_aut.png" alt="Company13" width="100px" height="100px"></div>
+                        <div class="slide"><img src="images/faras.png" alt="Company14" width="100px" height="100px"></div>
+                        <div class="slide"><img src="images/zobotic.png" alt="Company15" width="80px" height="80px"></div>
+                        <div class="slide"><img src="images/arm.jpeg" alt="Company16" width="80px" height="80px"></div>
+                        <div class="slide"><img src="images/inspirit.jpeg" alt="Company14" width="100px" height="100px"></div>
+                        <div class="slide"><img src="images/sacha.png" alt="Company15" width="80px" height="80px"></div>
+                        <div class="slide"><img src="images/glori.jpeg" alt="Company16" width="80px" height="80px"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="counters">
+                <div class="counter-card">
+                    <div class="counter" data-target="150">0</div>
+                    <div class="label">Project Completed</div>
+                </div>
+                <div class="counter-card">
+                    <div class="counter" data-target="10">0</div>
+                    <div class="label">Candidate trained</div>
+                </div>
+                <div class="counter-card">
+                    <div class="counter" data-target="50">0</div>
+                    <div class="label">Customer Served</div>
+                </div>
+                <div class="counter-card">
+                    <div class="counter" data-target="0">0</div>
+                    <div class="label">Candidate Placed</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer1">
+            <pre>
+                Copyright &copy; AI Technologies 2025 All rights reserved
+                aitdesigns69@gmail.com
+                +91 7058897873
+            </pre>
+        </div>       
+    </footer>
+
+    <script>
+        function toggleAbout() {
+            const aboutSections = document.querySelectorAll('.about');
+            aboutSections.forEach(section => {
+                if (section.style.display === 'none' || section.style.display === '') {
+                    section.style.display = 'block';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        }
+        
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.image-section img');
+        const dots = document.querySelectorAll('.dot');
+
+        function showSlides() {
+            slides.forEach((slide, index) => {
+                slide.classList.remove('active');
+                dots[index].classList.remove('active');
+            });
+            slideIndex = (slideIndex + 1) % slides.length;
+            slides[slideIndex].classList.add('active');
+            dots[slideIndex].classList.add('active');
+            setTimeout(showSlides, 2000);
+        }
+
+        function currentSlide(index) {
+            slideIndex = index - 1;
+            showSlides();
+        }
+
+        showSlides();
+
+        function counterAnimation() {
+            const counters = document.querySelectorAll('.counter');
+
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                let count = 0;
+                const speed = Math.ceil(target / 100);
+
+                function updateCount() {
+                    if (count < target) {
+                        count += speed;
+                        if (count > target) count = target;
+                        counter.innerText = count;
+                        setTimeout(updateCount, 20);
+                    }
+                }
+
+                const inView = () => {
+                    const rect = counter.getBoundingClientRect();
+                    return rect.top <= window.innerHeight && rect.bottom >= 0;
+                };
+
+                window.addEventListener('scroll', () => {
+                    if (inView() && counter.innerText === '0') {
+                        updateCount();
+                    }
+                });
+
+                if (inView() && counter.innerText === '0') {
+                    updateCount();
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', counterAnimation);
+    </script>
+</body>
+</html>
