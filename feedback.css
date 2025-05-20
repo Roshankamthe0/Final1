@@ -8,14 +8,14 @@
     background: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
     width: 100%;
     max-width: 400px;
     margin-top: 24px;
     margin-bottom: 20px;
     text-align: center;
     position: relative;
-    border: 2px solid #007bff;
+    /* border: 2px solid #007bff; */
     transition: border 0.3s ease;
 }
 
@@ -95,12 +95,22 @@
     transform: scale(0.8);
     transition: 0.3s ease;
 }
-main
-{
-    max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
+ main {
+  flex: 1;               
+  margin-top: 70px;      
+  max-width: 90%;
+   margin-left: 47px;
+ 
+  padding: 10px;
+  background-color: #d1d0d04e;
+  box-shadow:
+    0px -25px 40px -20px rgba(69, 238, 216, 0.25),
+    30px 0px 20px -25px rgba(69, 238, 216, 0.25),
+    0px 25px 20px -20px rgba(69, 238, 216, 0.25),
+    -25px 0px 40px -20px rgba(69, 238, 216, 0.25);
+  box-sizing: border-box;
 }
+
 @property --angle {
 syntax: '<angle>';
 initial-value: 0deg;
@@ -136,17 +146,7 @@ inherits: false;
     }
 }
 
-.main1
-{
-    max-width: 100%;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #d1d0d04e;
-           box-shadow: 0px -25px 40px -20px rgba(69, 238, 216, 0.25),
-            30px 0px 20px -25px rgba(69, 238, 216, 0.25),
-            0px 25px 20px -20px rgba(69, 238, 216, 0.25),
-            -25px 0px 40px -20px rgba(69, 238, 216, 0.25);
-}
+
 
  body
 {
