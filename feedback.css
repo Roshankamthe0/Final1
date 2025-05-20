@@ -1,0 +1,190 @@
+.form1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px
+}
+
+.feedback-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin-top: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+    border: 2px solid #007bff;
+    transition: border 0.3s ease;
+}
+
+.feedback-form:hover {
+    border-color: #0056b3;
+}
+
+.feedback-form h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #1069eb;;
+}
+
+.feedback-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.feedback-form input,
+.feedback-form textarea,
+.feedback-form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  
+}
+
+.feedback-form textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.feedback-form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.feedback-form button:hover {
+    background-color: #0056b3;
+}
+
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    text-align: center;
+}
+
+.star-rating input {
+    display: none;
+}
+
+.star-rating input + label {
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.star-rating input:checked ~ label {
+    color: orange;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+    color: orange;
+}
+
+.star-rating label:active {
+    transform: scale(0.8);
+    transition: 0.3s ease;
+}
+main
+{
+    max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+}
+@property --angle {
+syntax: '<angle>';
+initial-value: 0deg;
+inherits: false;
+}
+.feedback-form::after,
+.feedback-form::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), #59ff00, #007bff, #bc49b73e, #007bff, #007bff);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    border-radius: 10px;
+    animation: 3s spin linear infinite;
+}
+
+.feedback-form::before {
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
+
+.main1
+{
+    max-width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #d1d0d04e;
+           box-shadow: 0px -25px 40px -20px rgba(69, 238, 216, 0.25),
+            30px 0px 20px -25px rgba(69, 238, 216, 0.25),
+            0px 25px 20px -20px rgba(69, 238, 216, 0.25),
+            -25px 0px 40px -20px rgba(69, 238, 216, 0.25);
+}
+
+ body
+{
+    background-color: rgba(255, 255, 255, 0.597);
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+main {
+  flex: 1; /* Fills the remaining height */
+}
+
+.footer1 {
+  padding: 20px;
+  background: linear-gradient(to right, #004d7f, #004d7f);
+  font-family: 'Lato', sans-serif;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.footer1 pre {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+@media (max-width: 720px) {
+  .footer1 {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .footer1 pre {
+    text-align: center;
+    font-size: 14px;
+  }
+}

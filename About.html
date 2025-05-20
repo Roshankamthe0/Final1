@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us-AI Technologies</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+       
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .section {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .left-section {
+            flex: 1;
+            text-align: left;
+        }
+
+        .right-section {
+            flex: 1;
+        }
+
+        .right-section img {
+            width: 370px; 
+            height: 340px; 
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        .explore1 h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .row
+        {
+            margin-top: 3rem;
+        }
+       .row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap; 
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+
+.column {
+  -ms-flex: 25%;
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+.explore1
+{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+       
+        .btn {
+            display: inline-block;
+            background-color: #ff5722;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #260fba;
+        }
+  
+
+        @media (max-width: 768px) {
+            .section {
+                flex-direction: column;
+            }
+
+            .left-section, .right-section {
+                flex: unset;
+                width: 100%;
+            }
+
+            .right-section img {
+                width: 100%; 
+                height: auto;
+            }
+        }
+        .slide{
+    height: 250px;
+    width: 400px;
+    display: grid;
+    place-items: center;
+    padding: 15px;
+    perspective: 100px;
+}
+
+img{
+    height: 100%;
+    width:100%;
+    transition: transform 1s;
+    
+}
+.image-slider{
+    display: grid;
+    place-items: center;
+    position: relative;
+    overflow: hidden;
+    height: 250px;  
+    width: 100%;
+}
+.image-slider-track{
+    display: flex;
+    width:calc(200px*12);
+    animation: play 40s linear infinite;
+}
+
+@keyframes play{
+    0%{
+        transform: translateX(0);
+    }
+
+    100%{
+        transform: translateX(calc(-250px*6));
+    }
+}
+
+.image-slider::before,
+.image-slider::after{
+    background: linear-gradient(to right,rgba(255,255,255,1)0%,rgba(255,255,255,0)100%);
+    content: '';
+    height: 100%;
+    width: 15%;
+    z-index: 2;
+    position: absolute;
+
+    }
+
+    .image-slider::before{
+        left:0;
+        top:0;
+    }
+
+    .image-slider::after{
+        right:0;
+        top:0;
+        background: linear-gradient(to left,rgba(255,255,255,1)0%,rgba(255,255,255,0)100%);
+
+    }
+
+    img:hover{
+        transform: translateZ(20px);
+    }
+
+    @media (max-width: 768px) {
+    .image-slider {
+        height: 180px;  
+        width: 100%;
+    }
+
+    .image-slider-track {
+        width: calc(150px * 12); 
+        animation: play 30s linear infinite;  
+    }
+
+    .slide {
+        height: 180px;
+        width: 250px;  
+    }
+
+    .slide img {
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+    }
+
+    @keyframes play {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(calc(-250px * 6)); 
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .image-slider {
+        height: 150px;
+    }
+
+    .slide {
+        height: 150px;
+        width: 200px; 
+    }
+
+    .slide img {
+        border-radius: 3px;
+    }
+
+    .image-slider-track {
+        width: calc(120px * 12);  
+    }
+
+    @keyframes play {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(calc(-200px * 6));
+        }
+    }
+}
+
+.image-slider1 {
+    display: grid;
+    place-items: center;
+    position: relative;
+    overflow: hidden;
+    height: 250px;  
+    width: 100%;
+}
+
+.image-slider-track1 {
+    display: flex;
+    width: calc(200px * 12);
+    animation: play1 40s linear infinite;
+}
+
+@keyframes play1 {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-250px * 14));
+    }
+}
+
+.image-slider1::before,
+.image-slider1::after {
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+    content: '';
+    height: 100%;
+    width: 15%;
+    z-index: 2;
+    position: absolute;
+}
+
+.image-slider1::before {
+    left: 0;
+    top: 0;
+}
+
+.image-slider1::after {
+    right: 0;
+    top: 0;
+    background: linear-gradient(to left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+}
+
+.slide1 {
+    height: 250px;
+    width: 400px;
+    display: grid;
+    place-items: center;
+    padding: 15px;
+    perspective: 100px;
+}
+
+.slide1 img {
+    height: 100%;
+    width: 250px;
+    transition: transform 1s;
+   
+}
+
+.slide1 img:hover {
+    transform: translateZ(20px);
+}
+
+@media (max-width: 768px) {
+    .image-slider1 {
+        height: 180px;  
+
+    }
+
+    .image-slider-track1 {
+        width: calc(150px * 12);
+        animation: play1 30s linear infinite;
+    }
+
+    .slide1 {
+        height: 180px;
+        width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-slider1 {
+        height: 150px;
+    }
+
+    .slide1 {
+        height: 150px;
+        width: 200px;
+    }
+
+    .image-slider-track1 {
+        width: calc(120px * 12);
+    }
+
+    @keyframes play1 {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(calc(-200px * 6));
+        }
+    }
+}
+ .image-slider1
+ {
+    margin-top: 40px;
+ }  
+
+ main
+{
+    max-width: 90%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #d1d0d04e;
+           box-shadow: 0px -25px 40px -20px rgba(69, 238, 216, 0.25),
+            30px 0px 20px -25px rgba(69, 238, 216, 0.25),
+            0px 25px 20px -20px rgba(69, 238, 216, 0.25),
+            -25px 0px 40px -20px rgba(69, 238, 216, 0.25);
+}
+
+ body
+{
+    background-color: rgba(255, 255, 255, 0.597);
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: #004d7f;;
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    right: 0;
+    z-index: 1000; 
+    width: 100%;
+}
+
+.container
+{
+  margin-top: 80px
+}
+.typewriter-container {
+    display: inline-block;
+    width: 100%;
+    max-width: 100%;
+    min-height: 60px;
+    overflow: hidden;
+    position: relative;
+    text-align: center; 
+
+}
+
+.typewriter-text {
+    display: inline;
+    font-size: 24px;
+    font-weight: bold;
+    color: #1069eb;
+    white-space: normal;  
+    text-align: left;    
+    /* word-wrap: break-word;     */
+}
+
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #1069eb;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+font-size: 18px;
+    }
+
+    .typewriter-text {
+        font-size: 20px;
+        text-align: left;
+    }
+}
+
+ 
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="">AI Technologies</a>
+            </div>
+            <ul class="nav-links">
+                <li class="nav-item">
+                    <a href="index.html" >Home</a>
+                    <!-- <button class="dropdown-toggle">▼</button>
+                    <div class="dropdown">
+                        <a href="#">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                    </div> -->
+                </li>
+                <li class="nav-item">
+                    <a href="About.html" class="nav-link active" >About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="service.html">Services</a>
+                    <!-- <button class="dropdown-toggle">▼</button>
+                    <div class="dropdown">
+                        <a href="#">1</a>
+                        <a href="#">2</a>
+                    </div> -->
+                </li>
+                <li><a href="Career.html">Career</a></li>
+ 
+                <li class="nav-item">
+                    <a href="Trainning.html">Trainning</a>
+                    <!-- <button class="dropdown-toggle">▼</button> -->
+                    <!-- <div class="dropdown">
+                        <a href="Trainning.html#program1">Summary</a>
+                        <a href="Trainning.html#modules1">Syllabus</a>
+                        <a href="Trainning.html#projects1">Projects</a>
+                        <a href="Trainning.html#contact1">Query</a>
+                    </div> -->
+                </li>
+                <li><a href="contact.html">Contact us</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+            <div class="menu" id="tmenu">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="section">
+                
+                <div class="left-section">
+                    <div class="typewriter-container">
+                        <span class="typewriter-text"></span>
+                    </div>
+                    
+
+                    <br>
+                    <p>
+                        AI Technologies (AIT) is at the forefront of engineering innovation, providing world-class design, development, and manufacturing solutions. We take pride in our commitment to precision, quality, and delivering excellence at every step. With a team of highly skilled professionals, we combine technical expertise with creative problem-solving to craft solutions that redefine industry standards.</p>
+                        <br>
+
+                        <p>Our mission is to empower businesses by transforming their ideas into reality through cutting-edge technology and superior craftsmanship. From automotive engineering to advanced manufacturing processes, AIT offers end-to-end solutions tailored to meet the unique needs of our clients.</p>
+                        <br>
+                        
+                        <p>What sets us apart is our unwavering focus on clients success. By delivering projects on time, within budget, and beyond expectations, we build lasting partnerships with our customers. At AIT, innovation is not just a goal; it’s a way of life. Together, let’s drive the future of engineering excellence.</p>
+                        <br>
+                    <!-- <a href="#" class="btn" onclick="toggleAbout()">Read More</a> -->
+                </div>
+
+                <div class="right-section">
+                    <img src="images/about_us.jpeg" alt="about us">
+                </div>
+            </div>
+
+           
+    <!-- <section class="explore1" style="display: none;"> -->
+        <h1 style="color: #1069eb;"> Explore Our Designs</h1>
+
+ 
+<div class="image-slider">
+    <div class="image-slider-track">
+        <div class="slide">      
+<img src="images/1.jpg">
+</div><div class="slide">      
+    <img src="images/2.jpg">
+    </div>
+    <div class="slide">      
+     <img src="images/3.jpg">
+    </div>
+     <div class="slide">      
+   <img src="images/4.jpg">
+     </div>
+  <div class="slide">      
+       <img src="images/5.jpg">
+     </div>
+     <div class="slide">      
+      <img src="images/6.jpg">
+      </div>
+       <div class="slide">      
+        <img src="images/7.jpg">
+      </div>
+       <div class="slide">      
+     <img src="images/8.jpg">
+        </div>
+        <div class="slide">      
+    <img src="images/9.jpg">
+         </div>
+        </div>
+    </div>
+    
+                     <div class="image-slider1">
+                        <div class="image-slider-track1">
+                            <div class="slide1">      
+                                <img src="images/P01.jpg">
+                                </div>
+                                    <div class="slide1">      
+                                     <img src="images/P03.jpg">
+                                    </div>
+                                     <div class="slide1">      
+                                   <img src="images/P04.jpg">
+                                     </div>
+                                  <div class="slide1">      
+                                       <img src="images/P05.jpg">
+                                     </div>
+                                     <div class="slide1">      
+                                      <img src="images/P06.jpg">
+                                      </div>
+                                       <div class="slide1">      
+                                        <img src="images/P07.png">
+                                      </div>
+                                       <div class="slide1">      
+                                     <img src="images/P08.jpg">
+                                        </div>
+                                        <div class="slide1">      
+                                    <img src="images/P09.jpg">
+                                         </div>
+                     <div class="slide1">      
+                        <img src="images/P10.jpg">
+                        </div><div class="slide1">      
+                            <img src="images/P11.jpg">
+                            </div>
+                            <div class="slide1">      
+                             <img src="images/P12.jpg">
+                            </div>
+                             <div class="slide1">      
+                           <img src="images/P13.jpg">
+                             </div>
+                          <div class="slide1">      
+                               <img src="images/P14.jpg">
+                             </div>
+                             <div class="slide1">      
+                              <img src="images/P15.jpg">
+                              </div>
+                               <div class="slide1">      
+                                <img src="images/P16.jpg">
+                              </div>
+                               <div class="slide1">      
+                             <img src="images/P17.jpg">
+                                </div>
+                                
+</div>
+</div>
+
+</div>
+</section>
+
+</main>
+<footer>
+    <div class="footer1">
+        <pre>
+  
+Copyright &copy AI Technologies 2025 All right reserved
+            aitdesigns69@gmail.com
+        +91 7058897873 , +91 8767084970
+        </pre>        
+    </div>       
+  </footer>
+
+<script>
+    function toggleAbout() {
+        const aboutSection = document.querySelector('.explore1');
+        aboutSection.style.display = aboutSection.style.display === 'block' ? 'none' : 'block';
+    }
+
+</script>
+     <script src="script.js"></script>
+
+     <script>
+        const texts = [
+        "Excellence Beyond Expectations",
+                    "Commitment to Quality and Precision",
+                    "Innovating Excellence, Engineering the Future"
+                   
+];
+
+let speed = 100;
+const textElement = document.querySelector(".typewriter-text");
+
+let textIndex = 0;
+let charIndex = 0;
+
+function typeWriter() {
+    if (charIndex < texts[textIndex].length) {
+        textElement.textContent += texts[textIndex].charAt(charIndex);
+        charIndex++;
+        setTimeout(typeWriter, speed);
+    } else {
+        setTimeout(eraseText, 1000);
+    }
+}
+
+function eraseText() {
+    if (charIndex > 0) {
+        textElement.textContent = texts[textIndex].substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(eraseText, 50);
+    } else {
+        textIndex = (textIndex + 1) % texts.length;
+        setTimeout(typeWriter, 500);
+    }
+}
+
+window.onload = typeWriter;
+
+     </script>
+  
+</body>
+</html>
+

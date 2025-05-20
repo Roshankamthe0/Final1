@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career-AI Technologies</title>
+    <link rel="stylesheet" href="style.css">
+   
+  <style>
+    body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;  
+    margin: 0;          
+    background-color: rgba(255, 255, 255, 0.597);
+    }
+
+    main {
+  flex: 1;               
+  margin-top: 80px;      
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  background-color: #d1d0d04e;
+  box-shadow:
+    0px -25px 40px -20px rgba(69, 238, 216, 0.25),
+    30px 0px 20px -25px rgba(69, 238, 216, 0.25),
+    0px 25px 20px -20px rgba(69, 238, 216, 0.25),
+    -25px 0px 40px -20px rgba(69, 238, 216, 0.25);
+  box-sizing: border-box;
+}
+    
+    .section {
+        padding: 10px 0;
+    }
+
+    #jobs h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 30px;
+        color: #1069eb;;
+    }
+
+    .job-listings {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 30px;
+    }
+
+    .job-item {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .job-item h3 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+
+    .job-item p {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+
+    .job-item .btn {
+        display: inline-block;
+        display: flex;
+        padding: 10px 20px;
+        background-color: #007BFF;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        transition: background-color 0.3s;
+        cursor: pointer;
+        margin: auto;
+   
+       
+    }
+
+    .job-item .btn:hover {
+        background-color: #0056b3;
+    }
+
+    #apply h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    #apply p {
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    /* .modal-content {
+        background-color: white;
+        margin: 15% auto;
+        padding: 20px;
+        border-radius: 8px;
+        width: 50%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    } */
+    .modal-content {
+    position: absolute;
+    background-color: white;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    margin: 5% auto; 
+}
+
+
+    .modal-content h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .modal-content label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+    }
+
+    .modal-content input,
+    .modal-content textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    .modal-content button {
+       
+        padding: 10px 20px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        
+    }
+
+    .modal-content button:hover {
+        background-color: #0056b3;
+    }
+
+    .close {
+        color: #aaa;
+        font-size: 28px;
+        font-weight: bold;
+        position: absolute;
+        top: 10px;
+        right: 25px;
+        cursor: pointer;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+    }
+    main
+{
+    max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+}
+.job-item {
+    width: 100%;
+    height: auto;
+    border: 3px solid transparent;
+    background: linear-gradient(white, white) padding-box, 
+                linear-gradient(90deg, #33333360, #33333360, #33333360, #33333360) border-box;
+    background-size: 200% 200%;
+    box-shadow: 0 0 10px #33333360(0, 123, 255, 0.5); 
+  }
+
+    
+
+    @media (max-width: 1200px) {
+        .modal-content {
+            width: 60%;
+        }
+    }
+
+    @media (max-width: 992px) {
+        .modal-content {
+            width: 70%;
+        }
+
+        .job-listings {
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        }
+    }
+
+    @media (max-width: 768px) {
+        .job-item h3 {
+            font-size: 1.5rem;
+        }
+
+        .job-item p {
+            font-size: 0.9rem;
+        }
+
+        .job-item .btn {
+            font-size: 0.9rem;
+            padding: 8px 16px;
+        }
+
+        .modal-content {
+            width: 80%;
+        }
+
+        #jobs h2 {
+            font-size: 1.5rem;
+        }
+    }
+
+    @media (max-width: 576px) {
+
+        .job-item h3 {
+            font-size: 1.4rem;
+        }
+
+        .job-item p {
+            font-size: 0.9rem;
+        }
+    }
+
+    .job-item h3
+    {
+        text-align: center;
+    }
+
+     main
+{
+    max-width: 90%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #d1d0d04e;
+           box-shadow: 0px -25px 40px -20px rgba(69, 238, 216, 0.25),
+            30px 0px 20px -25px rgba(69, 238, 216, 0.25),
+            0px 25px 20px -20px rgba(69, 238, 216, 0.25),
+            -25px 0px 40px -20px rgba(69, 238, 216, 0.25);
+}
+
+ body
+{
+    background-color: rgba(255, 255, 255, 0.597);
+    
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: #004d7f;;
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    right: 0;
+    z-index: 1000; 
+    width: 100%;
+}
+
+.container
+{
+  margin-top: 80px
+}
+
+
+.footer1
+{
+    padding:20px;
+    border: none;   
+    background-color: #004d7f;
+    /* background-color: #333; */
+    text-align: center;
+    color: #FFFFFF;
+    flex-shrink: 0;
+
+}
+
+
+</style>
+
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="">AI Technologies</a>
+            </div>
+            <ul class="nav-links">
+                <li class="nav-item">
+                    <a href="index.html">Home</a>
+                    <!-- <button class="dropdown-toggle">▼</button>
+                    <div class="dropdown">
+                        <a href="#">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                    </div> -->
+                </li>
+                <li class="nav-item">
+                    <a href="About.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="service.html">Services</a>
+                    <!-- <button class="dropdown-toggle">▼</button>
+                    <div class="dropdown">
+                        <a href="#">1</a>
+                        <a href="#">2</a>
+                    </div> -->
+                </li>
+                <li><a href="Career.html" class="nav-link active" >Career</a></li>
+                <li class="nav-item">
+                    <a href="Trainning.html">Trainning</a>
+                    <!-- <button class="dropdown-toggle">▼</button> -->
+                    <!-- <div class="dropdown">
+                        <a href="#program1">Summary</a>
+                        <a href="#modules1">Syllabus</a>
+                        <a href="#projects1">Projects</a>
+                        <a href="#contact1">Query</a>
+                    </div> -->
+                </li>
+                <li><a href="contact.html">Contact us</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+            <div class="menu" id="tmenu">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="jobs" class="section">
+            <div class="container">
+                <h2>Available Job Opportunities</h2>
+                <div class="job-listings">
+                    <div class="job-item">
+                        <h3>BIW Fixture Designer</h3>
+                        <p><strong>Job Description:</strong> Lead the design of custom BIW fixtures for automotive manufacturing. Work closely with engineering teams to ensure precision and efficiency.</p>
+                        <button class="btn" onclick="openModal('applyForm', 'BIW Fixture Designer')">Apply Now</button>
+                    </div>
+                    <div class="job-item">
+                        <h3>BIW Product Designer</h3>
+                        <p><strong>Job Description:</strong> Lead the design and development of custom BIW fixtures for automotive manufacturing, collaborating with engineering teams to ensure optimal precision and efficiency.</p>
+                        <button class="btn" onclick="openModal('applyForm', 'BIW Product Designer')">Apply Now</button>
+                    </div>
+                    <div class="job-item">
+                        <h3>Plastic Product Designer</h3>
+                        <p><strong>Job Description:</strong> Lead the design and development of plastic components for various applications, collaborating with engineering teams to ensure optimal functionality, durability, and manufacturability.</p>
+                        <button class="btn" onclick="openModal('applyForm', 'Plastic Product Designer')">Apply Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <div id="applyForm" class="modal">
+            <div class="modal-content">
+                <h2>Apply for Job</h2>
+                <form action="Career.php" method="POST" enctype="multipart/form-data">
+                    <label for="jobTitle">Job Title:</label>
+                    <input type="text" id="jobTitle" name="jobTitle" readonly>
+    
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+    
+                    <label for="mobile">Mobile Number:</label>
+                    <input type="number" id="mobile" name="mobile" required>
+    
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>               
+    
+                    <label for="resume">Upload Resume:</label>
+                    <input type="file" id="resume" name="resume" required>
+<!--     
+                    <label for="coverLetter">Cover Letter:</label>
+                    <textarea id="coverLetter" name="coverLetter" rows="4" required></textarea> -->
+    
+                    <button type="submit" class="btn">Submit Application</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    
+ <footer>
+    <div class="footer1">
+        <pre>
+  
+Copyright &copy AI Technologies 2025 All right reserved
+            aitdesigns69@gmail.com
+        +91 7058897873 , +91 8767084970
+        </pre>        
+    </div>       
+  </footer>
+
+    
+    <script>
+    function openModal(modalId, jobTitle) {
+        document.getElementById(modalId).style.display = "block";
+        document.getElementById("jobTitle").value = jobTitle;
+    }
+    
+    function closeModal() {
+        document.getElementById("applyForm").style.display = "none";
+    }
+    
+    window.onclick = function(event) {
+        if (event.target === document.getElementById("applyForm")) {
+            closeModal();
+        }
+    }
+    </script>
+    
+    <script src="script.js"></script>
+</body>
+</html>

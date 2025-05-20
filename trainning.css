@@ -1,0 +1,192 @@
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    /* background-color: #cccccc39;
+    box-shadow: 2px 2px 4px #cccccc39; */
+    color: black;
+    padding: 20px;
+    margin: 15px;
+}
+
+ .content,.form {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    margin-bottom: 20px;
+    padding-left: 1px;
+}
+
+.content h1, .form h2, h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #1069eb;;
+}
+
+.content p, ul {
+    font-size: 1rem;
+}
+.content, .form, .program, .eligibility, .why, .modules, .projects,.contact
+{
+    margin-bottom: 30px;
+}
+
+
+.content ul, .form ul, .program ul, .eligibility ul, .why ul, .modules ul, .projects ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.content ul li, .form ul li, .program ul li, .eligibility ul li, .why ul li, .modules ul li, .projects ul li {
+    margin: 10px 0;
+    padding-left: 25px;
+    position: relative;
+}
+
+.content ul li:before, .form ul li:before, .program ul li:before, .eligibility ul li:before, 
+.why ul li:before, .modules ul li:before, .projects ul li:before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #00457c;
+}
+
+.form {
+  
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); 
+    padding: 20px;
+    border: 2px solid blue;
+}
+.form {
+    width: 100%;
+  height: 400px;
+    border: 3px solid transparent;
+    border-radius: 10px;
+    /* background: linear-gradient(white, white) padding-box, 
+                linear-gradient(90deg, #59ff00, #007bff, #007bff, #007bff) border-box;
+    background-size: 200% 200%;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);  */
+    background: linear-gradient(white, white) padding-box, 
+    linear-gradient(90deg, #33333360, #33333360, #33333360, #33333360) border-box;
+background-size: 200% 200%;
+box-shadow: 0 0 10px #33333360(0, 123, 255, 0.5); 
+  }
+
+
+.form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+
+}
+
+.form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #00457c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+.form button:hover {
+    background-color: #003351;
+}
+
+.contact {
+    text-align: center;
+    background-color: #00457c;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contact p {
+    font-size: 1.2rem;
+}
+
+.contact a {
+    color: #00d8ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main
+{
+    max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1px;
+        
+    }
+
+    h1, h2 {
+        font-size: 1.5rem;
+    }
+
+    .form input, .form button {
+        font-size: 0.9rem;
+    }
+    .contact {
+    text-align: center;
+    background-color: #00457c;
+    color: #fff;
+    padding: 15px;
+            margin-left: -33px;
+        margin-right: -38px;
+    border-radius: 10px;
+}
+
+    .contact p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    h1, h2 {
+        font-size: 1.2rem;
+    }
+
+    p, ul {
+        font-size: 0.9rem;
+    }
+
+    .form input, .form button {
+        padding: 8px;
+    }
+}
+main
+{
+    max-width: 90%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #d1d0d04e;
+           box-shadow: 0px -25px 40px -20px rgba(69, 238, 216, 0.25),
+            30px 0px 20px -25px rgba(69, 238, 216, 0.25),
+            0px 25px 20px -20px rgba(69, 238, 216, 0.25),
+            -25px 0px 40px -20px rgba(69, 238, 216, 0.25);
+}
+
+ body
+{
+    background-color: rgba(255, 255, 255, 0.597);
+}

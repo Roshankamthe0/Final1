@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us-AI Technologies</title>
+    <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+  
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: #004d7f;;
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    right: 0;
+    z-index: 1000; 
+    width: 100%;
+}
+
+
+
+    </style>
+  </head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="">AI Technologies</a>
+            </div>
+            <ul class="nav-links">
+                <li class="nav-item">
+                    <a href="index.html">Home</a>
+                    <!-- <button class="dropdown-toggle">▼</button>
+                    <div class="dropdown">
+                        <a href="#">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                    </div> -->
+                </li>
+                <li class="nav-item">
+                    <a href="About.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="service.html">Services</a>
+                    <!-- <button class="dropdown-toggle">▼</button>
+                    <div class="dropdown">
+                        <a href="#">1</a>
+                        <a href="#">2</a>
+                    </div> -->
+                </li>
+                <li><a href="Career.html">Career</a></li>
+                <li class="nav-item">
+                    <a href="Trainning.html">Trainning</a>
+                    <!-- <button class="dropdown-toggle">▼</button> -->
+                    <!-- <div class="dropdown">
+                      <a href="#program1">Summary</a>
+                      <a href="#modules1">Syllabus</a>
+                      <a href="#projects1">Projects</a>
+                      <a href="#contact1">Query</a>
+                  </div> -->
+                </li>
+                <li><a href="contact.html" class="nav-link active" >Contact us</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+            <div class="menu" id="tmenu">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        
+            <div class="contact-container">
+              <div class="form-container">
+                <h1>Get In Touch</h1>
+                <p>We are here for you! How can we help?</p>
+                <form action="contact.php" method="post"  id="contact-form" >
+                  <span class="error-message">Name</span>
+                  <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                  <span class="error-message">Email</span>
+                  <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                  <span class="error-message">Mobile number</span>
+                  <input type="mobile" id="mobile" name="mobile" placeholder="Enter your mobile number" required>                
+                  <span class="error-message"> Your message</span>
+                  <textarea id="message" name="message" placeholder="Enter your message..." required></textarea>
+                  
+          
+                  <button type="submit">Submit</button>
+                </form>
+              </div>
+          
+              <div class="info-container">
+                <div class="gif1">
+                <img src="images/contact-us.gif" alt="Contact_Us">
+              </div>
+                <div class="info">
+                    
+                  <p><i class="fa-sharp fa-solid fa-location-dot"></i>A I Technologies,
+                        102, Lilavati Complex, near Government Polytechnic College, Awasari(Kh) Pune 410503</p>
+                  <p><i class="fa-solid fa-phone"></i>+91 7058897873,+91 8767084970 </p>
+                  <p><i class="fa-duotone fa-solid fa-envelope"></i> aitdesigns69@gmail.com</p>
+                </div>
+                <div class="social-icons">
+                  <!-- <a href="#"><i class="fa-brands fa-x-twitter"></i></a> -->
+                  <a href="https://www.linkedin.com/company/aitdesigns/posts/?feedView=all"><i class="fa-brands fa-linkedin"></i></a>
+                
+                </div>
+              </div>
+              
+            </div>
+            <div class="map-section">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.0299872359326!2d73.9579981!3d18.9946359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c83e5f9a7c41%3A0x5d2a1c0edb4e7b4d!2sLilavati%20Complex%2C%20Awasari%20Khurd%2C%20Maharashtra%20410303!5e0!3m2!1sen!2sin!4v1705767890123!5m2!1sen!2sin"  allowfullscreen="" loading="lazy"></iframe>
+          </div>
+          
+        
+    </main>
+  <footer>
+    <div class="footer1">
+        <pre>
+  
+Copyright &copy AI Technologies 2025 All right reserved
+            aitdesigns69@gmail.com
+        +91 7058897873 , +91 8767084970
+        </pre>        
+    </div>     
+      
+  </footer>
+
+    <script>
+        
+  document.addEventListener("DOMContentLoaded", function() {
+    const menu = document.getElementById("tmenu");
+    const navLinks = document.querySelector(".nav-links");
+    
+    menu.addEventListener("click", function() {
+      navLinks.classList.toggle("open");
+    });
+  });
+
+
+    </script>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>
