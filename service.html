@@ -98,7 +98,7 @@
 
     .swiper {
       width: 100%;
-      padding-top: 3.125rem;
+      padding-top: 1.125rem;
     }
 
     .swiper-pagination-bullet,
@@ -317,32 +317,43 @@ main
   
   
 }
-@media (max-width: 720px) {
- html, body {
-  height: 115%;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-}
 
-main {
-  flex: 1;
-  padding-bottom: 80px; 
-}
 
- .footer1 {
-    font-size: 14px;
-    padding: 10px;
+@media (max-width: 768px) {
+  #font1
+  {
+    font-size:20px
+  }
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
   }
 
-  .footer1 pre {
+  main {
+    flex: 1;
+    padding: 20px;
+  }
+
+  .footer1 {
+    padding: 20px;
+    background: linear-gradient(to right, #004d7f 0%, #004d7f 100%);
+    color: #FFFFFF;
+    font-family: 'Lato', sans-serif;
     text-align: center;
     font-size: 14px;
   }
 
+  .footer1 pre {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    white-space: pre-wrap;
+    font-size: 13px;
+    text-align: center;
+  }
 }
-
    </style>
 </head>
 <body>
@@ -397,11 +408,12 @@ main {
 
 
     <main>
+      <div id="space">
 
               
               <div>
                 <!-- <span style="color: #1069eb;;">Our</span> -->
-                <h1 style="color: #1069eb;;">Services</h1>
+                <h1 id="font1" style="color: #1069eb"> Services</h1>
                 <!-- <hr> -->
                 <!-- <p>We provided services</p> -->
               </div>
@@ -489,7 +501,7 @@ main {
                 
                 <div class="swiper-pagination"></div>
               </div>
-              
+              </div>
             </main>
          <footer>
     <div class="footer1">
